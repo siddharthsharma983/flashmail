@@ -7,6 +7,7 @@ const { Server } = require("socket.io");
 
 const authRoutes = require("./routes/authRoutes");
 const emailRoutes = require("./routes/emailRoutes");
+const roomRoutes = require("./routes/roomRoutes");
 const Message = require("./models/Message");
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/emails", emailRoutes);
+app.use("/api/rooms", roomRoutes);
 
 app.get("/", (req, res) => res.send("FlashMail API Running ✅"));
 

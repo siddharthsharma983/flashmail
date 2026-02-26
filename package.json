@@ -1,0 +1,13 @@
+{
+  "name": "flashmail",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

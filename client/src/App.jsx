@@ -15,7 +15,7 @@ const PrivateRoute = ({ children }) => {
   return token ? children : <Navigate to="/login" replace />;
 };
 
-export default function App() {
+function App() {
   return (
     <Router>
       <Routes>
@@ -33,7 +33,7 @@ export default function App() {
           }
         />
 
-        {/* Old broken routes safety */}
+        {/* Safety redirects (Dashboard/Rooms removed) */}
         <Route path="/dashboard" element={<Navigate to="/chat" replace />} />
         <Route path="/rooms" element={<Navigate to="/chat" replace />} />
 
@@ -44,3 +44,5 @@ export default function App() {
     </Router>
   );
 }
+
+export default App;
